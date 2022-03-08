@@ -1,17 +1,27 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import Vue from "vue";
+import Vuex from "vuex";
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
-export default new Vuex.Store({
-  state: {
-  },
-  getters: {
-  },
+interface State {
+  count: number;
+}
+
+export const module = {
+  state: () => ({
+    count: 0,
+  }),
+  getters: {},
   mutations: {
+    increment(state: State, val: number) {
+      state.count += val;
+    },
+    reset(state: State, val: number) {
+      state.count = val;
+    },
   },
-  actions: {
-  },
-  modules: {
-  }
-})
+  actions: {},
+  modules: {},
+};
+
+export default new Vuex.Store(module);
