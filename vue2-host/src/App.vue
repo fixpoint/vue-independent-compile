@@ -3,6 +3,7 @@
     <img alt="Vue logo" src="./assets/logo.png" />
     <HelloWorld />
     <Vue2SfcLibSample />
+    <TestComponent />
   </div>
 </template>
 

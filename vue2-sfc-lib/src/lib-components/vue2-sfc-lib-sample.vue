@@ -1,5 +1,6 @@
 <script lang="ts">
 import Vue from "vue";
+import store from "@/store";
 
 interface SampleData {
   initCounter: number;
@@ -22,7 +23,7 @@ export default /*#__PURE__*/ Vue.extend({
   },
   computed: {
     counter() {
-      return this.$store.state.count;
+      return store.state.count;
     },
     changedBy() {
       const { message } = this as SampleData;
@@ -33,18 +34,18 @@ export default /*#__PURE__*/ Vue.extend({
   methods: {
     increment(arg: Event | number): void {
       const amount = typeof arg !== "number" ? 1 : arg;
-      this.$store.commit("increment", amount);
+      store.commit("increment", amount);
       this.message.action = "incremented by";
       this.message.amount = amount;
     },
     decrement(arg: Event | number): void {
       const amount = typeof arg !== "number" ? 1 : arg;
-      this.$store.commit("increment", -amount);
+      store.commit("increment", -amount);
       this.message.action = "decremented by";
       this.message.amount = amount;
     },
     reset(): void {
-      this.$store.commit("reset", this.initCounter);
+      store.commit("reset", this.initCounter);
       this.message.action = "reset";
       this.message.amount = null;
     },

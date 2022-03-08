@@ -3,7 +3,6 @@ import Dev from "./serve.vue";
 // To register individual components where they are used (serve.vue) instead of using the
 // library as a whole, comment/remove this import and it's corresponding "Vue.use" call
 import MyVueComponentLib from "@/entry.esm";
-import store from "@/store";
 
 Vue.use(MyVueComponentLib);
 
@@ -11,5 +10,4 @@ Vue.config.productionTip = false;
 
 new Vue({
   render: (h): VNode => h(Dev),
-  store,
 }).$mount("#app");
