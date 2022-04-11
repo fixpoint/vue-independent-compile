@@ -1,6 +1,8 @@
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
-import HomeView from "../views/HomeView.vue";
+// eslint-disable-next-line
+// @ts-ignore
+import { HomeView } from "../../../vite-sfc-lib/dist/my-lib.es.js";
 
 Vue.use(VueRouter);
 
