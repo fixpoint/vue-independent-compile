@@ -2,7 +2,7 @@ import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
 // eslint-disable-next-line
 // @ts-ignore
-import { HomeView } from "../../../vite-sfc-lib/dist/my-lib.es.js";
+import { HomeView } from "../../../sfc-lib-a/dist/sfc-lib-a.es.js";
 
 Vue.use(VueRouter);
 
