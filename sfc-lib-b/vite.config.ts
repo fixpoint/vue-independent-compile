@@ -6,8 +6,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, "src/library-entry.ts"),
-      name: "SfcLibA",
-      fileName: (format) => `sfc-lib-a.${format}.js`,
+      name: "SfcLibB",
+      fileName: (format) => `sfc-lib-b.${format}.js`,
     },
     rollupOptions: {
       external: ["vue"],
